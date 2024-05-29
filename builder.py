@@ -80,7 +80,7 @@ while True:
                 Write.Print("\nYou have entered invalid. Please try again.", Colors.red)
 
     elif choice == "2": 
-        answer = input(Fore.RED + "\nDo you want to change profile photo of BLX Stealer? (Y/N) " + Style.RESET_ALL)
+        answer = input(Fore.RED + "\nDo you want to change profile photo of skidlord supreme? (Y/N) " + Style.RESET_ALL)
         if answer.upper() == "Y":
             os.system("cls || clear")
             pfp = input(Fore.RED + "\nEnter Your Link Of New Profile Photo: " + Style.RESET_ALL)
@@ -97,7 +97,7 @@ while True:
         elif answer.upper() == "N":
             next
 
-        answer = input(Fore.RED + "\nDo you want to change name of BLX Stealer? (Y/N) " + Style.RESET_ALL)
+        answer = input(Fore.RED + "\nDo you want to change name of skidlord supreme? (Y/N) " + Style.RESET_ALL)
         if answer.upper() == "Y":
             os.system("cls || clear")
             newname = input(Fore.RED + "\nEnter New Name: " + Style.RESET_ALL)
@@ -107,7 +107,7 @@ while True:
             filepath = os.path.join(os.getcwd(), filename)
             with open(filepath, "r", encoding="utf-8") as f:
                 content = f.read()
-            new_content = content.replace('"BLX Stealer 2.0 anti dualhook | skid"', f'"{newname}"')
+            new_content = content.replace('"skidlord supreme 2.0 anti dualhook | skid"', f'"{newname}"')
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(new_content)
             Write.Print(f"\n{filename} file updated.", Colors.red)
@@ -128,14 +128,14 @@ while True:
         obfuscate = False
 
         while True:
-            answer = input(Fore.RED + "\nDo you want to make exe file? (Y/N) " + Style.RESET_ALL)
+            answer = input(Fore.RED + "\nDo you want to make  exe file? (Y/N) " + Style.RESET_ALL)
             if answer.upper() == "Y":
                 if not obfuscate:
                     cmd = f"pyinstaller --onefile --windowed {filename}"
                 else:
                     cmd = f"pyinstaller --onefile --windowed {filename} --name {filename.split('.')[0]}"
                 subprocess.call(cmd, shell=True)
-                Write.Print(f"\n{filename} The file has been converted to exe.", Colors.red)
+                Write.Print(f"\n{filename} The file has been converted to a exe.", Colors.red)
                 break
             elif answer.upper() == "N":
                 break
@@ -152,4 +152,4 @@ while True:
         break
 
     else:
-        Write.Print("\nYou have entered invalid. Please try again.", Colors.red)
+        Write.Print("\nYou have entered a invalid character. Please try again.", Colors.red)
